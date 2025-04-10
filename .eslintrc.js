@@ -1,4 +1,4 @@
-module.exports = {
-  root: true,
-  extends: '@react-native',
+export default {
+    root: true,
+    extends: '@react-native',
 };
