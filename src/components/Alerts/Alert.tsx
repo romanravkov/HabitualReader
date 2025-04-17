@@ -6,7 +6,7 @@ import { useTheme } from '@react-navigation/native';
 import Icon, { IconNameType } from 'src/components/Icon';
 import Text from 'src/components/Text';
 import { useAppDispatch } from 'src/store';
-import { deleteAlert, IAlert } from 'src/store/reducers/alerts-reducer.ts';
+import { deleteAlert, IAlert } from 'src/store/reducers/alertsReducer.ts';
 import colors from 'src/styles/colors.ts';
 import { ThemeType } from 'src/styles/theme.ts';
 import addAlpha from 'src/utils/addAlpha.ts';

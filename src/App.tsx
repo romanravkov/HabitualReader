@@ -22,7 +22,6 @@ const StatusBarManager = () => {
 export default function App() {
     const scheme = useColorScheme();
 
-
     return (
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>

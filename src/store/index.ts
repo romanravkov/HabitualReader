@@ -16,9 +16,9 @@ import {
 import reducers from 'src/store/reducers';
 
 const persistConfig = {
-    key: 'CryptonStorage',
+    key: 'HabitualReaderStorage',
     storage: AsyncStorage,
-    whitelist: ['alerts'],
+    whitelist: ['alerts', 'books'],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);

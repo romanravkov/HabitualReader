@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View } from 'react-native';
+import { View } from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import Alert from 'src/components/Alerts/Alert';
@@ -9,20 +9,13 @@ const AlertsWrapper = () => {
     const alerts = useAppSelector(state => state.alerts);
 
     return (
-        <SafeAreaView>
-            <View style={styles.container}>
-                {alerts?.length
-                    ? alerts.map((el, index) => (
-                          <Alert
-                              last={index === alerts.length - 1}
-                              {...el}
-                              key={el.id}
-                              id={el.id}
-                          />
-                      ))
-                    : null}
-            </View>
-        </SafeAreaView>
+        <View style={styles.container}>
+            {alerts?.length
+                ? alerts.map((el, index) => (
+                      <Alert last={index === alerts.length - 1} {...el} key={el.id} id={el.id} />
+                  ))
+                : null}
+        </View>
     );
 };
 

@@ -1,12 +1,13 @@
 import { ReactElement } from 'react';
 import { LayoutAnimation } from 'react-native';
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { generate } from 'shortid';
 
 export interface IAlert {
     text?: string;
     type: 'error' | 'warning' | 'success';
     child?: ReactElement;
-    id: number;
+    id: string;
     duration?: number;
 }
 
@@ -21,20 +22,18 @@ const alertsSlice = createSlice({
                 ...state,
                 {
                     ...action.payload,
-                    id: new Date().getTime(),
+                    id: generate(),
                 },
             ];
             if (newAlerts.length > 5) {
                 newAlerts.shift();
             }
-            LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
-            return newAlerts;
-        },
-        deleteAlert(state, action: PayloadAction<{ id: number }>) {
-            const newAlerts = state.filter(el => el.id !== action.payload.id);
-
             // LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
             return newAlerts;
+        },
+        deleteAlert(state, action: PayloadAction<{ id: IAlert['id'] }>) {
+            LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+            return state.filter(el => el.id !== action.payload.id);
         },
     },
 });

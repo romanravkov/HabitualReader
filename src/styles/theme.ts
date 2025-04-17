@@ -1,15 +1,15 @@
 import { Theme } from '@react-navigation/native';
 
-const primary = '#35CE8D';
-const darkPrimary = '#249164';
+const primary = '#7198DB';
+const darkPrimary = '#426dba';
 
 const darkTheme = {
     dark: true,
     colors: {
         // required for navigation
         primary: darkPrimary,
-        background: '#161616',
-        card: '#222222',
+        background: '#2b2e35',
+        card: '#1e2025',
         text: '#e3e3e3',
         border: '#333333',
         notification: '#FD6150',
@@ -19,19 +19,19 @@ const darkTheme = {
 
         block: '#202020',
 
-        background1: '#202020',
-        background2: '#303030',
-        background3: '#404040',
+        background100: '#1e2025',
+        background200: '#24272e',
+        background300: '#2f3239',
 
         primaryText: '#e3e3e3',
         disabledPrimary: '#616161',
         textOnPrimary: '#fcfcfc',
 
-        gray1: '#CFCCCC',
-        gray2: '#999999',
-        gray3: '#777777',
-        gray4: '#555555',
-        gray5: '#444444',
+        gray100: '#CFCCCC',
+        gray200: '#999999',
+        gray300: '#777777',
+        gray400: '#555555',
+        gray500: '#444444',
 
         disabled: '#616161',
         // static
@@ -77,19 +77,19 @@ const lightTheme = {
         icon: primary,
         block: '#fcfcfc',
 
-        background1: '#ffffff',
-        background2: '#e7e7e7',
-        background3: '#dcdcdc',
+        background100: '#ffffff',
+        background200: '#e7e7e7',
+        background300: '#dcdcdc',
 
         primaryText: primary,
         textOnPrimary: '#fcfcfc',
         disabledPrimary: '#b8b8b8',
 
-        gray1: '#333333',
-        gray2: '#555555',
-        gray3: '#666666',
-        gray4: '#999999',
-        gray5: '#CFCCCC',
+        gray100: '#333333',
+        gray200: '#555555',
+        gray300: '#666666',
+        gray400: '#999999',
+        gray500: '#CFCCCC',
 
         disabled: '#b8b8b8',
         // static
